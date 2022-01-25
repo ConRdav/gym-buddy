@@ -27,9 +27,9 @@ def get_workout_routine():
     """
     while True:
         print("Please choose a workout routine.")
-        print("Your options are a 3 day, 4 day or 5 day routine.")
-        print("Please choose your preferred routine by entering 1, 2 or 3.\n")
-
+        print("To view a 3 day routine press 1.")
+        print("To view a 4 day routine press 2.")
+        print("To view a 5 day routine press 3.\n")
         routine = input("Enter your choice here: ")
         if validate_input(routine):
             print(f"You picked the {routine} day workout routine.")
@@ -146,8 +146,10 @@ def main():
         get_workout_routine()
     elif main_choice == '2':
         create_own_workout()
-    else:
+    elif main_choice == '3':
         view_saved_workouts()
+    else:
+        print("Nothing here.")
 
 
 print("Welcome to the Gym Buddy!\n")
