@@ -59,5 +59,15 @@ def show_routine(routine):
     else:
         pprint(five_day.get_all_values())
 
+def get_input(prompt="", cast=None, condition=None, errorMessage=None):
+    """
+    Input validation
+    """
+    while True:
+        try:
+            response = (cast or str)(input(prompt))
+            assert condition is None or condition(response)
+            return response
+        except ValueError:
+            print(errorMessage or "Invalid input. Try again.")
 
-get_workout_routine()
