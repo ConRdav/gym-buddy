@@ -59,6 +59,7 @@ def show_routine(routine):
     else:
         pprint(five_day.get_all_values())
 
+
 def get_input(prompt="", cast=None, condition=None, errorMessage=None):
     """
     Input validation
@@ -71,3 +72,30 @@ def get_input(prompt="", cast=None, condition=None, errorMessage=None):
         except ValueError:
             print(errorMessage or "Invalid input. Try again.")
 
+
+def create_own_workout():
+    """
+    Allows user to create own workout
+    """
+    print("Create your own workout.\n")
+    new_workout = get_input(prompt="Name your workout: ")
+    print("You are limited to 4 exercises to pick carefully!\n")
+    create_exercise1 = get_input(prompt="Enter your exercise name: ")
+    create_exercise2 = get_input(prompt="Enter your exercise name: ")
+    create_exercise3 = get_input(prompt="Enter your exercise name: ")
+    create_exercise4 = get_input(prompt="Enter your exercise name: ")
+    print("Now enter the workouts sets and reps.")
+    print("You are limited to numbers 1-9.\n")
+    create_sets = get_input(prompt="Enter the amount of sets per exercise: ",
+                            cast=int)
+    create_reps = get_input(prompt="Enter the amount of reps per exercise: ",
+                            cast=int)
+    print("Well done you have created your own workout!\n")
+    print("To view your workout press V.")
+    print("To create a new one press C.\n")
+    data = [[new_workout, create_exercise1, create_exercise2, create_exercise3,
+            create_exercise4, create_sets, create_reps]]
+    print(data)
+
+
+create_own_workout()
