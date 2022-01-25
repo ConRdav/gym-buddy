@@ -91,8 +91,6 @@ def create_own_workout():
     create_reps = get_input(prompt="Enter the amount of reps per exercise: ",
                             cast=int)
     print("Well done you have created your own workout!\n")
-    print("To view your workout press V.")
-    print("To create a new one press C.\n")
     data = [[new_workout, create_exercise1, create_exercise2, create_exercise3,
             create_exercise4, create_sets, create_reps]]
     save_workouts(data)
@@ -116,12 +114,19 @@ def save_workouts(data):
     print("Workout has been saved succesfully.\n")
 
 
+def view_saved_workouts():
+    """
+    shows all saved workouts created by user
+    """
+    pprint(workouts.get_all_values())
+
+
 def user_choice(create_choice):
     """
     gives user choice feedback
     """
     if create_choice == '1':
-        pprint(workouts.get_all_values())
+        view_saved_workouts()
     elif create_choice == '2':
         create_own_workout()
     else:
@@ -142,7 +147,7 @@ def main():
     elif main_choice == '2':
         create_own_workout()
     else:
-        print("Function not created yet")
+        view_saved_workouts()
 
 
 print("Welcome to the Gym Buddy!\n")
