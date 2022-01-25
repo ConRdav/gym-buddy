@@ -28,33 +28,33 @@ def get_workout_routine():
     while True:
         print("Please choose a workout routine.")
         print("Your options are a 3 day, 4 day or 5 day routine.")
-        print("Please choose your preferred routine by entering 3, 4 or 5.\n")
+        print("Please choose your preferred routine by entering 1, 2 or 3.\n")
 
         routine = input("Enter your choice here: ")
-        if validate_routine(routine):
+        if validate_input(routine):
             print(f"You picked the {routine} day workout routine.")
             break
         else:
-            print("Invalid entry, please enter 3, 4 or 5.")
+            print("Invalid entry, please enter 1, 2 or 3.")
 
     show_routine(routine)
 
 
-def validate_routine(routine):
+def validate_input(value):
     """
-    validates the user input
+    input validation
     """
-    pattern = re.compile('[3-5]{1}')
-    return pattern.match(routine)
+    pattern = re.compile('[1-3]{1}')
+    return pattern.match(value)
 
 
 def show_routine(routine):
     """
     prints user requested routine
     """
-    if routine == '3':
+    if routine == '1':
         pprint(three_day.get_all_values())
-    elif routine == '4':
+    elif routine == '2':
         pprint(four_day.get_all_values())
     else:
         pprint(five_day.get_all_values())
@@ -97,6 +97,15 @@ def create_own_workout():
             create_exercise4, create_sets, create_reps]]
     save_workouts(data)
 
+    print("Enter 1 to view saved workouts.")
+    print("Enter 2 to create a new workout.")
+    print("Enter 3 to return to the main menu.\n")
+    create_choice = input("Enter 1, 2 or 3: \n")
+    if validate_input(create_choice):
+        user_choice(create_choice)
+    else:
+        print("Invalid entry, please enter 1, 2 or 3.")
+
 
 def save_workouts(data):
     """
@@ -104,7 +113,19 @@ def save_workouts(data):
     """
     print("Saving workout...\n")
     workouts.append_rows(data)
-    print("Workout has been saved succesfully.")
+    print("Workout has been saved succesfully.\n")
+
+
+def user_choice(create_choice):
+    """
+    gives user choice feedback
+    """
+    if create_choice == '1':
+        pprint(workouts.get_all_values())
+    elif create_choice == '2':
+        print('2')
+    else:
+        print('3')
 
 
 create_own_workout()
