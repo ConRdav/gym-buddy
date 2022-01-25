@@ -53,11 +53,11 @@ def show_routine(routine):
     prints user requested routine
     """
     if routine == '1':
-        pprint(three_day.get_all_values())
+        pprint(three_day.get_all_records())
     elif routine == '2':
-        pprint(four_day.get_all_values())
+        pprint(four_day.get_all_records())
     else:
-        pprint(five_day.get_all_values())
+        pprint(five_day.get_all_records())
 
 
 def get_input(prompt="", cast=None, condition=None, errorMessage=None):
@@ -118,7 +118,7 @@ def view_saved_workouts():
     """
     shows all saved workouts created by user
     """
-    pprint(workouts.get_all_values())
+    pprint(workouts.get_all_records())
 
 
 def user_choice(create_choice):
