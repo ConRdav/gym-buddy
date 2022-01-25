@@ -123,15 +123,20 @@ def user_choice(create_choice):
     if create_choice == '1':
         pprint(workouts.get_all_values())
     elif create_choice == '2':
-        print('2')
+        create_own_workout()
     else:
-        print('3')
+        main()
 
 
 def main():
     """
     runs the app
     """
+    print("To view a routine press 1.\n")
+    print("To create own workout press 2.\n")
+    print("To view saved workouts press 3.\n")
+    main_choice = input("Enter your choice here: ")
+    validate_input(main_choice)
     if main_choice == '1':
         get_workout_routine()
     elif main_choice == '2':
@@ -141,9 +146,4 @@ def main():
 
 
 print("Welcome to the Gym Buddy!\n")
-print("To view a routine press 1.\n")
-print("To create own workout press 2.\n")
-print("To view saved workouts press 3.\n")
-main_choice = input("Enter your choice here: ")
-validate_input(main_choice)
 main()
