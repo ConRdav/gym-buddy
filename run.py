@@ -95,7 +95,16 @@ def create_own_workout():
     print("To create a new one press C.\n")
     data = [[new_workout, create_exercise1, create_exercise2, create_exercise3,
             create_exercise4, create_sets, create_reps]]
-    print(data)
+    save_workouts(data)
+
+
+def save_workouts(data):
+    """
+    updates the workouts worksheet
+    """
+    print("Saving workout...\n")
+    workouts.append_rows(data)
+    print("Workout has been saved succesfully.")
 
 
 create_own_workout()
