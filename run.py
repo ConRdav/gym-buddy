@@ -25,26 +25,28 @@ def get_workout_routine():
     """
     Gets the workout routine requested by the user
     """
-    while True:
-        print("Please choose a workout routine.")
-        print("To view a 3 day routine press 1.")
-        print("To view a 4 day routine press 2.")
-        print("To view a 5 day routine press 3.\n")
-        routine = input("Enter your choice here: ")
-        if validate_input(routine):
-            print(f"You picked the {routine} day workout routine.")
-            break
-        else:
-            print("Invalid entry, please enter 1, 2 or 3.")
-
+    print("Please choose a workout routine.")
+    print("To view a 3 day routine press 3.")
+    print("To view a 4 day routine press 4.")
+    print("To view a 5 day routine press 5.\n")
+    routine = input("Enter your choice here: ")
+    validate_input(routine)
+    print(f"You picked the {routine} day workout routine.")
     show_routine(routine)
+    print("To view another workout routine enter 1.")
+    print("To return to the main menu enter 2.\n")
+    create_choice = input("Enter 1 or 2: \n")
+    if validate_input(create_choice):
+        user_choice(create_choice)
+    else:
+        print("Invalid entry, please enter 1 or 2.")
 
 
 def validate_input(value):
     """
     input validation
     """
-    pattern = re.compile('[1-3]{1}')
+    pattern = re.compile('[1-5]{1}')
     return pattern.match(value)
 
 
@@ -52,12 +54,17 @@ def show_routine(routine):
     """
     prints user requested routine
     """
-    if routine == '1':
+    if routine == '3':
+        print(f"You picked the {routine} day workout routine.")
         pprint(three_day.get_all_records())
-    elif routine == '2':
+    elif routine == '4':
+        print(f"You picked the {routine} day workout routine.")
         pprint(four_day.get_all_records())
-    else:
+    elif routine == '5':
+        print(f"You picked the {routine} day workout routine.")
         pprint(five_day.get_all_records())
+    else:
+        print("Invalid entry, please enter 3, 4 or 5.")
 
 
 def get_input(prompt="", cast=None, condition=None, errorMessage=None):
