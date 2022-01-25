@@ -128,4 +128,22 @@ def user_choice(create_choice):
         print('3')
 
 
-create_own_workout()
+def main():
+    """
+    runs the app
+    """
+    if main_choice == '1':
+        get_workout_routine()
+    elif main_choice == '2':
+        create_own_workout()
+    else:
+        print("Function not created yet")
+
+
+print("Welcome to the Gym Buddy!\n")
+print("To view a routine press 1.\n")
+print("To create own workout press 2.\n")
+print("To view saved workouts press 3.\n")
+main_choice = input("Enter your choice here: ")
+validate_input(main_choice)
+main()
