@@ -200,6 +200,25 @@ To clear saved workouts press 4.
         print("Invalid entry, please enter 1, 2, 3 or 4.")
 
 
+def exit_app():
+    """
+    exits the app
+    """
+    print("""
+====================================
+
+Thanks for using the Workout buddy!
+
+====================================
+""")
+    while input != 1 or 2:
+        restart = input("To restart the Workout Buddy enter 1: ")
+        if restart == '1':
+            main()
+        else:
+            print("Invalid entry, please enter 1.")
+
+
 print("""
 ================================
 
