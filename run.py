@@ -90,7 +90,7 @@ def create_own_workout():
     create_exercise1 = get_input(prompt="Enter your exercise name: ")
     create_exercise2 = get_input(prompt="Enter your exercise name: ")
     create_exercise3 = get_input(prompt="Enter your exercise name: ")
-    create_exercise4 = get_input(prompt="Enter your exercise name: ")
+    create_exercise4 = get_input(prompt="Enter your exercise name: \n")
     print("Now enter the workouts sets and reps.")
     print("You are limited to numbers 1-9.\n")
     create_sets = get_input(prompt="Enter the amount of sets per exercise: ",
@@ -159,5 +159,11 @@ def main():
         print("Nothing here.")
 
 
-print("Welcome to the Gym Buddy!\n")
+print("""
+=========================
+
+WELCOME TO THE GYM BUDDY
+
+=========================
+""")
 main()
