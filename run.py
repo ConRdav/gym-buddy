@@ -201,7 +201,7 @@ def main():
     runs the app
     """
     print("""
-===============================
+=================================
 To view a routine press 1.
 
 To create own workout press 2.
@@ -209,7 +209,9 @@ To create own workout press 2.
 To view saved workouts press 3.
 
 To clear saved workouts press 4.
-================================
+
+To exit the workout buddy press 5.
+==================================
     """)
     main_choice = input("Enter your choice here: ")
     validate_input(main_choice)
@@ -221,8 +223,10 @@ To clear saved workouts press 4.
         view_saved_workouts()
     elif main_choice == '4':
         clear_saved_workouts()
+    elif main_choice == '5':
+        exit_app()   
     else:
-        print("Invalid entry, please enter 1, 2, 3 or 4.")
+        print("Invalid entry, please enter 1, 2, 3, 4 or 5.")
 
 
 def exit_app():
@@ -239,6 +243,13 @@ Thanks for using the Workout buddy!
     while input != 1 or 2:
         restart = input("To restart the Workout Buddy enter 1: ")
         if restart == '1':
+            print("""
+================================
+
+    WELCOME TO THE GYM BUDDY
+
+================================
+""")
             main()
         else:
             print("Invalid entry, please enter 1.")
