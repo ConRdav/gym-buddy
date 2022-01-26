@@ -31,7 +31,6 @@ def get_workout_routine():
     print("To view a 5 day routine press 5.\n")
     routine = input("Enter your choice here: ")
     validate_input(routine)
-    print(f"You picked the {routine} day workout routine.")
     show_routine(routine)
     print("To view another workout routine enter 1.")
     print("To return to the main menu enter 2.\n")
@@ -55,16 +54,17 @@ def show_routine(routine):
     prints user requested routine
     """
     if routine == '3':
-        print(f"You picked the {routine} day workout routine.")
+        print(f"You picked the {routine} day workout routine.\n")
         pprint(three_day.get_all_records())
     elif routine == '4':
-        print(f"You picked the {routine} day workout routine.")
+        print(f"You picked the {routine} day workout routine.\n")
         pprint(four_day.get_all_records())
     elif routine == '5':
-        print(f"You picked the {routine} day workout routine.")
+        print(f"You picked the {routine} day workout routine.\n")
         pprint(five_day.get_all_records())
     else:
         print("Invalid entry, please enter 3, 4 or 5.")
+        get_workout_routine()
 
 
 def get_input(prompt="", cast=None, condition=None, errorMessage=None):
