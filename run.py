@@ -117,12 +117,21 @@ def create_own_workout():
 
     print("Enter 1 to view saved workouts.")
     print("Enter 2 to create a new workout.")
-    print("Enter 3 to return to the main menu.\n")
-    create_choice = input("Enter 1, 2 or 3: \n")
-    if validate_input(create_choice):
-        user_choice(create_choice)
-    else:
-        print("Invalid entry, please enter 1, 2 or 3.")
+    print("Enter 3 to return to the main menu.")
+    print("Enter 4 to exit the Workout Buddy.\n")
+    while input != 1 or 2 or 3 or 4:
+        create_choice = input("Enter 1, 2, 3 or 4: ")
+        if create_choice == '1':
+            view_saved_workouts()
+            break
+        elif create_choice == '2':
+            create_own_workout()
+        elif create_choice == '3':
+            main()
+        elif create_choice == '4':
+            exit_app()
+        else:
+            print("Invalid entry, please enter 1, 2, 3 or 4.")
 
 
 def save_workouts(data):
@@ -139,6 +148,19 @@ def view_saved_workouts():
     shows all saved workouts created by user
     """
     pprint(workouts.get_all_records())
+    print("""
+===================================
+To return to the main menu press 1.
+To exit the Workout Buddy press 2.
+""")
+    while input != 1 or 2:
+        create_choice = input("Enter 1 or 2: ")
+        if create_choice == '1':
+            main()
+        elif create_choice == '2':
+            exit_app()
+        else:
+            print("Invalid entry, please enter 1 or 2.")
 
 
 def user_choice(create_choice):
