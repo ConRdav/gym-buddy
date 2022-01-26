@@ -14,30 +14,30 @@ My main goal for this project was to create an application that a user can acces
 
 ### Main Function Flow Chart
 
-I started by planning out my main function and all the different functions that they would allow the user to run through.
-
 ![Image](images/flowcharts/main_function_flowchart.png)
+
+I started by planning out my main function and all the different functions that they would allow the user to run through.
 
 ### View Workout Flow Chart
 
-This flowchart shows my thought process on what needed to be achieved by the View Workout function. The user picks either a three day, four day or five day workout routine depending on their goals. Then the user gets to view the workout routine and the option to view another if it didn't line up with their goals or they can head back to the main function to continue navigating through the Workout Buddy.
-
 ![Image](images/flowcharts/view_workout_flowchart.png)
+
+This flowchart shows my thought process on what needed to be achieved by the View Workout function. The user picks either a three day, four day or five day workout routine depending on their goals. Then the user gets to view the workout routine and the option to view another if it didn't line up with their goals or they can head back to the main function to continue navigating through the Workout Buddy.
 
 ### Create A Workout Flow Chart
 
-This flowchart shows my thought process on what needed to be achieved by the Create Workout function. The user gets to name the workout, add four exercises and add the sets and reps for the workout. This allows the user a certain amount of personalisation when creating their workout.
-
 ![Image](images/flowcharts/create_workout_function.png)
+
+This flowchart shows my thought process on what needed to be achieved by the Create Workout function. The user gets to name the workout, add four exercises and add the sets and reps for the workout. This allows the user a certain amount of personalisation when creating their workout.
 
 ### View Saved Workouts Flow Chart
 
-This function is simpler then the previous two so the flow chart is not too detailed but it allowed me to hit the specific criteria needed for the function. This allows the user to view there previously created workouts. 
+![Image](images/flowcharts/view_saved_flowchart.png)
 
-![Image](images/)
+This function is simpler then the previous two so the flow chart is not too detailed but it allowed me to hit the specific criteria needed for the function. This allows the user to view there previously created workouts. 
 
 ### Delete Saved Workouts Flow Chart
 
-This function allows the user to clear the saved workouts they have previously created.
+![Image](images/flowcharts/delete_saved_flowchart.png)
 
-![Image](images/)
+This function allows the user to clear the saved workouts they have previously created.
