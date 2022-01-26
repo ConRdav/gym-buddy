@@ -10,31 +10,31 @@ Gym Buddy is a Python run command line automation. The users workout data is sto
 
 ## Project Planning Phase
 
-My main goal for this project was to create an application that a user can access stored workouts and create their own as it would save users using pen and paper when recording their workout routines and give them a place to store their fixed routines.
+The main goal for this project was to create an application that a user can access stored workouts and create their own as it would save users using pen and paper when recording their workout routines and give them a place to store their fixed routines.
 
 ### Main Function Flow Chart
 
 ![Image](images/flowcharts/main_function_flowchart.png)
 
-I started by planning out my main function and all the different functions that they would allow the user to run through.
+The project was initiated by planning out the main function and all the supporting functions that they would allow for the best experience for the user.
 
 ### View Workout Flow Chart
 
 ![Image](images/flowcharts/view_workout_flowchart.png)
 
-This flowchart shows my thought process on what needed to be achieved by the View Workout function. The user picks either a three day, four day or five day workout routine depending on their goals. Then the user gets to view the workout routine and the option to view another if it didn't line up with their goals or they can head back to the main function to continue navigating through the Workout Buddy.
+This flowchart shows the thought process on what needed to be achieved by the View Workout function. The user picks either a three day, four day or five day workout routine depending on their goals. Then the user gets to view the workout routine and the option to view another if it didn't line up with their goals or they can head back to the main function to continue navigating through the Workout Buddy.
 
 ### Create A Workout Flow Chart
 
 ![Image](images/flowcharts/create_workout_function.png)
 
-This flowchart shows my thought process on what needed to be achieved by the Create Workout function. The user gets to name the workout, add four exercises and add the sets and reps for the workout. This allows the user a certain amount of personalisation when creating their workout.
+This flowchart shows the thought process on what needed to be achieved by the Create Workout function. The user gets to name the workout, add four exercises and add the sets and reps for the workout. This allows the user a certain amount of personalisation when creating their workout.
 
 ### View Saved Workouts Flow Chart
 
 ![Image](images/flowcharts/view_saved_flowchart.png)
 
-This function is simpler then the previous two so the flow chart is not too detailed but it allowed me to hit the specific criteria needed for the function. This allows the user to view there previously created workouts. 
+This function is simpler then the previous two so the flow chart is not too detailed but it allows for the specific criteria needed for the function. This allows the user to view there previously created workouts. 
 
 ### Delete Saved Workouts Flow Chart
 
@@ -94,7 +94,7 @@ All input options have validation so an error message pops up if you enter the w
 
 ## Features left to implement
 
-In the future I would like to add the ability to track workouts and enter weights used for exercise so the user can personalise their routines and follow their progress. Inlcuding estimated 1 rep max for each exercise and incrementing the weight automatically for the user would make this app more inticing for users.
+Track workouts and enter weights used for exercise so the user can personalise their routines and follow their progress. Inlcuding estimated 1 rep max for each exercise and incrementing the weight automatically for the user would make this app more inticing for users.
 
 ## Testing
 
@@ -108,8 +108,8 @@ All the files pass the [PEP8](http://pep8online.com/) test successfully. As show
 
 ### The app has been deployed in Heroku.
 
-For this app to deploy in Heroku I had to add the requirements to the Gitpod workspace using the command `pip3 freeze > requirements.txt`. This tells Heroku the dependencies that need to be implemented.
+For this app to deploy in Heroku you need to add the requirements to the Gitpod workspace using the command `pip3 freeze > requirements.txt`. This tells Heroku the dependencies that need to be implemented.
 
-In Heroku I had to create a new application and insert the config vars configuration necessary for the my code to deploy. The two variables I set were `CREDS = creas.json` and `PORT = 8000`. After this I needed to add the buildpacks Python and Node.js. Following this I connected the app to my GitHub repository for gym-buddy and then I was able to deploy it. The link to my app is below.
+In Heroku, you create a new application and insert the config vars configuration necessary for the my code to deploy. The two variables set are `CREDS = creas.json` and `PORT = 8000`. After this, add the buildpacks Python and Node.js. Connected the app to my GitHub repository for gym-buddy and then deploy it. The link to an a running gym-buddy app is below.
 
 [The app is running here](https://gym-buddy-pp3.herokuapp.com/)
