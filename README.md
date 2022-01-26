@@ -10,6 +10,11 @@ Other Gym Buddy features the user can utilise is clearing their saved workouts i
 
 Gym Buddy is a Python-run command line automation. The user's workout data is stored in a spreadsheet run with Google Sheets, which is then connected via Google Cloud. The credentials are set up via Google Drive. Then the Google Auth library sets up the authentication, allowing Gspread to access to update the spreadsheet.
 
+Below is the link to the Google Sheet gym-buddy where the workouts are stored and read from.
+
+[Google Sheet](https://docs.google.com/spreadsheets/d/1fED3r7gZtCM7tjjfmE5oM001Gy1Y5DCf0PS5zHV99SA/edit?usp=sharing)
+
+
 ## Project Planning Phase
 
 The main goal for this project was to create a simple, user-friendly application that allows the user to: 
@@ -151,8 +156,34 @@ Existing bugs:
 
 For this app to deploy in Heroku, you need to add the requirements to the Gitpod workspace using the command `pip3 freeze > requirements.txt`. This tells Heroku the dependencies that need to be imported.
 
-In Heroku, you create a new application and insert the config vars necessary for the code to deploy. The two variables set are `CREDS = creas.json` and `PORT = 8000`. After this, the buildpacks Python and Node.js are added in order to ensure the dependencies required to configure the app are imported. Then, the app is connected to the GitHub repository for gym-buddy, before it is finally able to be deployed. 
+In Heroku, you create a new application and insert the config vars necessary for the code to deploy. The two variables set are `CREDS = creds.json` and `PORT = 8000`. After this, the buildpacks Python and Node.js are added in order to ensure the dependencies required to configure the app are imported. Then, the app is connected to the GitHub repository for gym-buddy, before it is finally able to be deployed. 
 
 The link to an a running gym-buddy app is below.
 
 [The app is running here](https://gym-buddy-pp3.herokuapp.com/)
+
+## Used Technologies
+
+### External Libraries
+
+#### Gspread
+
+Gspread is a Python API for Google Sheets. It allows us to read, write, update and delete data from a spreadsheet. To install it you use `pip install gspread` and then you have to open a project as a client `GSPREAD.CLIENT.open('name of the project')` and link your worksheet `worksheet('name of the worksheet')`.
+
+This app used gspread to read workouts and store workouts on the Google sheet. 
+
+The link for further reading on gspread: https://docs.gspread.org/en/v5.1.1/
+
+#### Google Auth
+
+Google auth  allows us to access Google Cloud safely through a method called Credentials.
+
+We have to call a method called from_service_account_file and pass to it our credential as a parameter. We get our credentials from our Google Cloud account inside the project we are working with and save it as a enviromenment variable in our local project. Save it in a variable
+
+Then using the previous variable created we call the with_scopes method passing to it the scope that we need to authorize. Save it in a variable
+
+Finally we need to authorize the gspread library to work in our project. To do that gspread has a method called authorize in which we have to pass the previous created variable in which we saved the scope variables.
+
+https://console.cloud.google.com
+
+
