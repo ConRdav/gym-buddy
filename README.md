@@ -41,3 +41,35 @@ This function is simpler then the previous two so the flow chart is not too deta
 ![Image](images/flowcharts/delete_saved_flowchart.png)
 
 This function allows the user to clear the saved workouts they have previously created.
+
+## Features
+
+### Welcome to Gym Buddy
+
+On starting Gym Buddy the user is greeted to a welcome message. Below this the user has a main menu with the options to view a workout routine, create their own workout, view previous saved workouts the user have created, delete all previous saved workouts the user have created and the option to close the Gym Buddy.
+
+![Image](images/)
+
+### View A Workout Routine
+
+Here the user gets to choose between an already made three day, four day or five day workout routine. The chosen routine is then printed out to the terminal and the user gets the option to view another routine or return to the main menu where they can continue to navigate Gym Buddy.
+
+![Image](images/)
+
+### Create A Workout
+
+This option allows the user to create their own workout where they can personalise it by naming it setting four exercises and their sets and reps depending on their goals. When they are finished creating their own workout it is saved to the spreadsheet and the user gets the option to create a new workout, view their saved workouts or return to the main menu. 
+
+![Image](images/)
+
+### View Saved Workouts
+
+This option allows the user to view their previously created workouts. The workouts get printed to the screen and the name, exercises, sets and reps get shown to the user. The user then is given the option to create a new workout, or return to the main menu.
+
+![Image](images/)
+
+### Delete Saved Workouts
+
+This option allows the user to delete all their previously created workouts giving them a clean slate to create new workouts depending on their changing workout goals. The user is then given the option to create a new workout, or return to the main menu.
+
+![Image](images/)
