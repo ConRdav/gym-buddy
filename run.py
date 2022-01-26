@@ -1,7 +1,7 @@
-import gspread
-from google.oauth2.service_account import Credentials
 import re
 from pprint import pprint
+import gspread
+from google.oauth2.service_account import Credentials
 
 
 SCOPE = [
@@ -67,7 +67,7 @@ def show_routine(routine):
         get_workout_routine()
 
 
-def get_input(prompt="", cast=None, condition=None, errorMessage=None):
+def get_input(prompt="", cast=None, condition=None, error_message=None):
     """
     Input validation
     """
@@ -77,7 +77,7 @@ def get_input(prompt="", cast=None, condition=None, errorMessage=None):
             assert condition is None or condition(response)
             return response
         except ValueError:
-            print(errorMessage or "Invalid input. Try again.")
+            print(error_message or "Invalid input. Try again.")
 
 
 def create_own_workout():
