@@ -25,10 +25,17 @@ def get_workout_routine():
     """
     Gets the workout routine requested by the user
     """
-    print("Please choose a workout routine.")
-    print("To view a 3 day routine press 3.")
-    print("To view a 4 day routine press 4.")
-    print("To view a 5 day routine press 5.\n")
+    print("""
+================================
+Please choose a workout routine.
+
+To view a 3 day routine press 3.
+
+To view a 4 day routine press 4.
+
+To view a 5 day routine press 5.
+================================
+""")
     routine = input("Enter your choice here: ")
     validate_input(routine)
     show_routine(routine)
@@ -191,10 +198,10 @@ To clear saved workouts press 4.
 
 
 print("""
-=========================
+================================
 
-WELCOME TO THE GYM BUDDY
+    WELCOME TO THE GYM BUDDY
 
-=========================
+================================
 """)
 main()
