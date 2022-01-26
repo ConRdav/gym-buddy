@@ -199,7 +199,6 @@ def clear_saved_workouts():
     validate_input(clear_choice)
     if clear_choice == '1':
         print("Removing saved workouts...")
-        # workouts.clear()
         workouts.batch_clear(["2:50"])
         print("Saved workouts removed.")
         main()
