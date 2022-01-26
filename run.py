@@ -45,7 +45,7 @@ To view another workout routine enter 1.
 
 To return to the main menu enter 2.
 
-To exit the Workout buddy enter 3.
+To exit the Gym Buddy enter 3.
 ========================================
 """)
     while input != 1 or 2 or 3:
@@ -128,7 +128,7 @@ Enter 2 to create a new workout.
 
 Enter 3 to return to the main menu.
 
-Enter 4 to exit the Workout Buddy.
+Enter 4 to exit the Gym Buddy.
 ========================================
 """)
     while input != 1 or 2 or 3 or 4:
@@ -164,7 +164,7 @@ def view_saved_workouts():
 ========================================
 To return to the main menu press 1.
 
-To exit the Workout Buddy press 2.
+To exit the Gym Buddy press 2.
 ========================================
 """)
     while input != 1 or 2:
@@ -224,7 +224,7 @@ To view saved workouts press 3.
 
 To clear saved workouts press 4.
 
-To exit the workout buddy press 5.
+To exit the Gym Buddy press 5.
 ========================================
     """)
     while input != 1 or 2 or 3 or 4 or 5:
@@ -250,7 +250,7 @@ def exit_app():
     print("""
 ========================================
 
-Thanks for using the Workout buddy!
+Thanks for using the Gym Buddy!
 
 ========================================
 """)
