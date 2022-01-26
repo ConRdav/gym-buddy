@@ -91,3 +91,13 @@ This option allows closes down the Gym Buddy giving the user a thank you message
 All input options have validation so an error message pops up if you enter the wrong input. As shown in an example below.
 
 ![Image](images/screenshots/input_validation.png)
+
+## Features left to implement
+
+In the future I would like to add the ability to track workouts and enter weights used for exercise so the user can personalise their routines and follow their progress. Inlcuding estimated 1 rep max for each exercise and incrementing the weight automatically for the user would make this app more inticing for users.
+
+## Testing
+
+All the files pass the [PEP8](http://pep8online.com/) test successfully. As shown below.
+
+![Image](images/screenshots/pep8.png)
