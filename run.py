@@ -41,11 +41,14 @@ To view a 5 day routine press 5.
     show_routine(routine)
     print("To view another workout routine enter 1.")
     print("To return to the main menu enter 2.\n")
-    create_choice = input("Enter 1 or 2: \n")
-    if validate_input(create_choice):
-        user_choice(create_choice)
+    create_choice = get_input(prompt="Enter 1 or 2: \n", cast=int, error_message="invalid entry, please enter 1 or 2.")
+    if create_choice == '1':
+        get_workout_routine()
+    elif create_choice == '2':
+        main()
     else:
-        print("Invalid entry, please enter 1 or 2.")
+        ValueError
+            
 
 
 def validate_input(value):
@@ -97,7 +100,7 @@ def create_own_workout():
     create_exercise1 = get_input(prompt="Enter your exercise name: ")
     create_exercise2 = get_input(prompt="Enter your exercise name: ")
     create_exercise3 = get_input(prompt="Enter your exercise name: ")
-    create_exercise4 = get_input(prompt="Enter your exercise name: \n")
+    create_exercise4 = get_input(prompt="Enter your exercise name: ")
     print("Now enter the workouts sets and reps.")
     print("You are limited to numbers 1-9.\n")
     create_sets = get_input(prompt="Enter the amount of sets per exercise: ",
