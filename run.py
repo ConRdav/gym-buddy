@@ -202,6 +202,7 @@ def clear_saved_workouts():
         print("Removing saved workouts...")
         workouts.clear()
         print("Saved workouts removed.")
+        main()
     elif clear_choice == '2':
         print("Returning to main menu...")
         main()
@@ -240,8 +241,7 @@ To exit the Gym Buddy press 5.
         elif main_choice == '5':
             exit_app()
         else:
-            print("Invalid entry, please enter 1, 2, 3, 4 or 5.")
-            main()
+            print("Invalid entry, please enter 1, 2, 3, 4 or 5.")        
 
 
 def exit_app():
