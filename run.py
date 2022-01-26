@@ -241,6 +241,7 @@ To exit the Gym Buddy press 5.
             exit_app()
         else:
             print("Invalid entry, please enter 1, 2, 3, 4 or 5.")
+            main()
 
 
 def exit_app():
