@@ -135,7 +135,6 @@ Enter 4 to exit the Gym Buddy.
         create_choice = input("Enter 1, 2, 3 or 4:\n")
         if create_choice == '1':
             view_saved_workouts()
-            break
         elif create_choice == '2':
             create_own_workout()
         elif create_choice == '3':
@@ -200,7 +199,8 @@ def clear_saved_workouts():
     validate_input(clear_choice)
     if clear_choice == '1':
         print("Removing saved workouts...")
-        workouts.clear()
+        # workouts.clear()
+        workouts.batch_clear(["2:50"])
         print("Saved workouts removed.")
         main()
     elif clear_choice == '2':
@@ -241,7 +241,7 @@ To exit the Gym Buddy press 5.
         elif main_choice == '5':
             exit_app()
         else:
-            print("Invalid entry, please enter 1, 2, 3, 4 or 5.")        
+            print("Invalid entry, please enter 1, 2, 3, 4 or 5.")
 
 
 def exit_app():
