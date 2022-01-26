@@ -73,3 +73,9 @@ This option allows the user to view their previously created workouts. The worko
 This option allows the user to delete all their previously created workouts giving them a clean slate to create new workouts depending on their changing workout goals. The user is then given the option to create a new workout, or return to the main menu.
 
 ![Image](images/)
+
+### Exit Gym Buddy
+
+This option allows closes down the Gym Buddy giving the user a thank you message and the option to restart the Gym Buddy returning to the Welcome Message on the first screen and the main menu.
+
+![Image](images/)
