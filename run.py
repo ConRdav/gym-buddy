@@ -36,7 +36,7 @@ To view a 4 day routine press 4.
 To view a 5 day routine press 5.
 ========================================
 """)
-    routine = input("Enter your choice here: ")
+    routine = input("Enter your choice here:\n")
     validate_input(routine)
     show_routine(routine)
     print("""
@@ -49,7 +49,7 @@ To exit the Gym Buddy enter 3.
 ========================================
 """)
     while input != 1 or 2 or 3:
-        create_choice = input("Enter 1, 2 or 3: ")
+        create_choice = input("Enter 1, 2 or 3:\n")
         if create_choice == '1':
             get_workout_routine()
         elif create_choice == '2':
@@ -104,17 +104,17 @@ def create_own_workout():
     Allows user to create own workout
     """
     print("Create your own workout.\n")
-    new_workout = get_input(prompt="Name your workout: ")
+    new_workout = get_input(prompt="Name your workout:\n")
     print("You are limited to 4 exercises to pick carefully!\n")
-    create_exercise1 = get_input(prompt="Enter your exercise name: ")
-    create_exercise2 = get_input(prompt="Enter your exercise name: ")
-    create_exercise3 = get_input(prompt="Enter your exercise name: ")
-    create_exercise4 = get_input(prompt="Enter your exercise name: ")
+    create_exercise1 = get_input(prompt="Enter your exercise name:\n")
+    create_exercise2 = get_input(prompt="Enter your exercise name:\n")
+    create_exercise3 = get_input(prompt="Enter your exercise name:\n")
+    create_exercise4 = get_input(prompt="Enter your exercise name:\n")
     print("Now enter the workouts sets and reps.")
     print("You are limited to numbers 1-9.\n")
-    create_sets = get_input(prompt="Enter the amount of sets per exercise: ",
+    create_sets = get_input(prompt="Enter the amount of sets per exercise:\n",
                             cast=int)
-    create_reps = get_input(prompt="Enter the amount of reps per exercise: ",
+    create_reps = get_input(prompt="Enter the amount of reps per exercise:\n",
                             cast=int)
     print("Well done you have created your own workout!\n")
     data = [[new_workout, create_exercise1, create_exercise2, create_exercise3,
@@ -132,7 +132,7 @@ Enter 4 to exit the Gym Buddy.
 ========================================
 """)
     while input != 1 or 2 or 3 or 4:
-        create_choice = input("Enter 1, 2, 3 or 4: ")
+        create_choice = input("Enter 1, 2, 3 or 4:\n")
         if create_choice == '1':
             view_saved_workouts()
             break
@@ -168,7 +168,7 @@ To exit the Gym Buddy press 2.
 ========================================
 """)
     while input != 1 or 2:
-        create_choice = input("Enter 1 or 2: ")
+        create_choice = input("Enter 1 or 2:\n")
         if create_choice == '1':
             main()
         elif create_choice == '2':
@@ -196,7 +196,7 @@ def clear_saved_workouts():
     print("Are you sure you want to remove all saved workouts?\n")
     print("Enter 1 for Yes.")
     print("Enter 2 for No.")
-    clear_choice = input("Enter your choice here: ")
+    clear_choice = input("Enter your choice here:\n")
     validate_input(clear_choice)
     if clear_choice == '1':
         print("Removing saved workouts...")
@@ -228,7 +228,7 @@ To exit the Gym Buddy press 5.
 ========================================
     """)
     while (input != 1 or 2 or 3 or 4 or 5):
-        main_choice = input("Enter your choice here: ")
+        main_choice = input("Enter your choice here:\n")
         if main_choice == '1':
             get_workout_routine()
         elif main_choice == '2':
@@ -255,7 +255,7 @@ Thanks for using the Gym Buddy!
 ========================================
 """)
     while input != 1 or 2:
-        restart = input("To restart the Gym Buddy enter 1: ")
+        restart = input("To restart the Gym Buddy enter 1:\n")
         if restart == '1':
             print("""
 ========================================
