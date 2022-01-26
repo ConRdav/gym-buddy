@@ -1,4 +1,3 @@
-import re
 from pprint import pprint
 import gspread
 from google.oauth2.service_account import Credentials
@@ -37,7 +36,6 @@ To view a 5 day routine press 5.
 ========================================
 """)
     routine = input("Enter your choice here:\n")
-    validate_input(routine)
     show_routine(routine)
     print("""
 ========================================
@@ -58,14 +56,6 @@ To exit the Gym Buddy enter 3.
             exit_app()
         else:
             print("Invalid entry, please enter 1, 2 or 3.")
-
-
-def validate_input(value):
-    """
-    input validation
-    """
-    pattern = re.compile('[1-5]{1}')
-    return pattern.match(value)
 
 
 def show_routine(routine):
@@ -196,7 +186,6 @@ def clear_saved_workouts():
     print("Enter 1 for Yes.")
     print("Enter 2 for No.")
     clear_choice = input("Enter your choice here:\n")
-    validate_input(clear_choice)
     if clear_choice == '1':
         print("Removing saved workouts...")
         workouts.batch_clear(["2:50"])
