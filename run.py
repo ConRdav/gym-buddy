@@ -255,7 +255,7 @@ Thanks for using the Workout buddy!
 ========================================
 """)
     while input != 1 or 2:
-        restart = input("To restart the Workout Buddy enter 1: ")
+        restart = input("To restart the Gym Buddy enter 1: ")
         if restart == '1':
             print("""
 ========================================
