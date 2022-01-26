@@ -26,7 +26,7 @@ def get_workout_routine():
     Gets the workout routine requested by the user
     """
     print("""
-================================
+========================================
 Please choose a workout routine.
 
 To view a 3 day routine press 3.
@@ -34,7 +34,7 @@ To view a 3 day routine press 3.
 To view a 4 day routine press 4.
 
 To view a 5 day routine press 5.
-================================
+========================================
 """)
     routine = input("Enter your choice here: ")
     validate_input(routine)
@@ -121,7 +121,7 @@ def create_own_workout():
             create_exercise4, create_sets, create_reps]]
     save_workouts(data)
     print("""
-==================================
+========================================
 Enter 1 to view saved workouts.
 
 Enter 2 to create a new workout.
@@ -129,7 +129,7 @@ Enter 2 to create a new workout.
 Enter 3 to return to the main menu.
 
 Enter 4 to exit the Workout Buddy.
-===================================
+========================================
 """)
     while input != 1 or 2 or 3 or 4:
         create_choice = input("Enter 1, 2, 3 or 4: ")
@@ -161,9 +161,11 @@ def view_saved_workouts():
     """
     pprint(workouts.get_all_records())
     print("""
-===================================
+========================================
 To return to the main menu press 1.
+
 To exit the Workout Buddy press 2.
+========================================
 """)
     while input != 1 or 2:
         create_choice = input("Enter 1 or 2: ")
@@ -213,7 +215,7 @@ def main():
     runs the app
     """
     print("""
-=================================
+========================================
 To view a routine press 1.
 
 To create own workout press 2.
@@ -223,7 +225,7 @@ To view saved workouts press 3.
 To clear saved workouts press 4.
 
 To exit the workout buddy press 5.
-==================================
+========================================
     """)
     while input != 1 or 2 or 3 or 4 or 5:
         main_choice = input("Enter your choice here: ")
@@ -246,21 +248,21 @@ def exit_app():
     exits the app
     """
     print("""
-====================================
+========================================
 
 Thanks for using the Workout buddy!
 
-====================================
+========================================
 """)
     while input != 1 or 2:
         restart = input("To restart the Workout Buddy enter 1: ")
         if restart == '1':
             print("""
-================================
+========================================
 
     WELCOME TO THE GYM BUDDY
 
-================================
+========================================
 """)
             main()
         else:
@@ -268,10 +270,10 @@ Thanks for using the Workout buddy!
 
 
 print("""
-================================
+========================================
 
     WELCOME TO THE GYM BUDDY
 
-================================
+========================================
 """)
 main()
