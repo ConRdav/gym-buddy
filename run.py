@@ -59,7 +59,7 @@ To exit the Gym Buddy enter 3.
         else:
             print("Invalid entry, please enter 1, 2 or 3.")
 
-        
+
 def validate_input(value):
     """
     input validation
@@ -227,7 +227,7 @@ To clear saved workouts press 4.
 To exit the Gym Buddy press 5.
 ========================================
     """)
-    while input != 1 or 2 or 3 or 4 or 5:
+    while (input != 1 or 2 or 3 or 4 or 5):
         main_choice = input("Enter your choice here: ")
         if main_choice == '1':
             get_workout_routine()
@@ -238,7 +238,7 @@ To exit the Gym Buddy press 5.
         elif main_choice == '4':
             clear_saved_workouts()
         elif main_choice == '5':
-            exit_app()   
+            exit_app()
         else:
             print("Invalid entry, please enter 1, 2, 3, 4 or 5.")
 
