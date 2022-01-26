@@ -120,11 +120,17 @@ def create_own_workout():
     data = [[new_workout, create_exercise1, create_exercise2, create_exercise3,
             create_exercise4, create_sets, create_reps]]
     save_workouts(data)
+    print("""
+==================================
+Enter 1 to view saved workouts.
 
-    print("Enter 1 to view saved workouts.")
-    print("Enter 2 to create a new workout.")
-    print("Enter 3 to return to the main menu.")
-    print("Enter 4 to exit the Workout Buddy.\n")
+Enter 2 to create a new workout.
+
+Enter 3 to return to the main menu.
+
+Enter 4 to exit the Workout Buddy.
+===================================
+""")
     while input != 1 or 2 or 3 or 4:
         create_choice = input("Enter 1, 2, 3 or 4: ")
         if create_choice == '1':
