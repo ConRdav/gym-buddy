@@ -40,15 +40,18 @@ To view a 5 day routine press 5.
     validate_input(routine)
     show_routine(routine)
     print("To view another workout routine enter 1.")
-    print("To return to the main menu enter 2.\n")
-    while input != 1 or 2:
-        create_choice = input("Enter 1 or 2: ")
+    print("To return to the main menu enter 2.")
+    print("To exit the Workout buddy enter 3.\n")
+    while input != 1 or 2 or 3:
+        create_choice = input("Enter 1, 2 or 3: ")
         if create_choice == '1':
             get_workout_routine()
         elif create_choice == '2':
             main()
+        elif create_choice == '3':
+            exit_app()
         else:
-            print("Invalid entry, please enter 1 or 2.")
+            print("Invalid entry, please enter 1, 2 or 3.")
 
         
 def validate_input(value):
