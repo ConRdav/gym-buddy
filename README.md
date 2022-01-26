@@ -101,3 +101,15 @@ In the future I would like to add the ability to track workouts and enter weight
 All the files pass the [PEP8](http://pep8online.com/) test successfully. As shown below.
 
 ![Image](images/screenshots/pep8.png)
+
+## Bugs
+
+## Deployment
+
+### The app has been deployed in Heroku.
+
+For this app to deploy in Heroku I had to add the requirements to the Gitpod workspace using the command `pip3 freeze > requirements.txt`. This tells Heroku the dependencies that need to be implemented.
+
+In Heroku I had to create a new application and insert the config vars configuration necessary for the my code to deploy. The two variables I set were `CREDS = creas.json` and `PORT = 8000`. After this I needed to add the buildpacks Python and Node.js. Following this I connected the app to my GitHub repository for gym-buddy and then I was able to deploy it. The link to my app is below.
+
+[The app is running here](https://gym-buddy-pp3.herokuapp.com/)
