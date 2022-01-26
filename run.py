@@ -39,9 +39,15 @@ To view a 5 day routine press 5.
     routine = input("Enter your choice here: ")
     validate_input(routine)
     show_routine(routine)
-    print("To view another workout routine enter 1.")
-    print("To return to the main menu enter 2.")
-    print("To exit the Workout buddy enter 3.\n")
+    print("""
+========================================
+To view another workout routine enter 1.
+
+To return to the main menu enter 2.
+
+To exit the Workout buddy enter 3.
+========================================
+""")
     while input != 1 or 2 or 3:
         create_choice = input("Enter 1, 2 or 3: ")
         if create_choice == '1':
@@ -179,7 +185,7 @@ def clear_saved_workouts():
     """
     clears all saved workouts
     """
-    print("Are you sure you want to remove all saved workouts?")
+    print("Are you sure you want to remove all saved workouts?\n")
     print("Enter 1 for Yes.")
     print("Enter 2 for No.")
     clear_choice = input("Enter your choice here: ")
@@ -189,7 +195,7 @@ def clear_saved_workouts():
         workouts.clear()
         print("Saved workouts removed.")
     elif clear_choice == '2':
-        print("Returning to main menu")
+        print("Returning to main menu...")
         main()
     else:
         print("Invalid entry, please enter 1 or 2.\n")
@@ -213,20 +219,20 @@ To clear saved workouts press 4.
 To exit the workout buddy press 5.
 ==================================
     """)
-    main_choice = input("Enter your choice here: ")
-    validate_input(main_choice)
-    if main_choice == '1':
-        get_workout_routine()
-    elif main_choice == '2':
-        create_own_workout()
-    elif main_choice == '3':
-        view_saved_workouts()
-    elif main_choice == '4':
-        clear_saved_workouts()
-    elif main_choice == '5':
-        exit_app()   
-    else:
-        print("Invalid entry, please enter 1, 2, 3, 4 or 5.")
+    while input != 1 or 2 or 3 or 4 or 5:
+        main_choice = input("Enter your choice here: ")
+        if main_choice == '1':
+            get_workout_routine()
+        elif main_choice == '2':
+            create_own_workout()
+        elif main_choice == '3':
+            view_saved_workouts()
+        elif main_choice == '4':
+            clear_saved_workouts()
+        elif main_choice == '5':
+            exit_app()   
+        else:
+            print("Invalid entry, please enter 1, 2, 3, 4 or 5.")
 
 
 def exit_app():
