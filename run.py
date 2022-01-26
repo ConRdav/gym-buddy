@@ -41,16 +41,16 @@ To view a 5 day routine press 5.
     show_routine(routine)
     print("To view another workout routine enter 1.")
     print("To return to the main menu enter 2.\n")
-    create_choice = get_input(prompt="Enter 1 or 2: \n", cast=int, error_message="invalid entry, please enter 1 or 2.")
-    if create_choice == '1':
-        get_workout_routine()
-    elif create_choice == '2':
-        main()
-    else:
-        ValueError
-            
+    while input != 1 or 2:
+        create_choice = input("Enter 1 or 2: ")
+        if create_choice == '1':
+            get_workout_routine()
+        elif create_choice == '2':
+            main()
+        else:
+            print("Invalid entry, please enter 1 or 2.")
 
-
+        
 def validate_input(value):
     """
     input validation
