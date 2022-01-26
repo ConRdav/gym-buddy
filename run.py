@@ -140,13 +140,42 @@ def user_choice(create_choice):
         main()
 
 
+def clear_saved_workouts():
+    """
+    clears all saved workouts
+    """
+    print("Are you sure you want to remove all saved workouts?")
+    print("Enter 1 for Yes.")
+    print("Enter 2 for No.")
+    clear_choice = input("Enter your choice here: ")
+    validate_input(clear_choice)
+    if clear_choice == '1':
+        print("Removing saved workouts...")
+        workouts.clear()
+        print("Saved workouts removed.")
+    elif clear_choice == '2':
+        print("Returning to main menu")
+        main()
+    else:
+        print("Invalid entry, please enter 1 or 2.\n")
+        clear_saved_workouts()
+
+
 def main():
     """
     runs the app
     """
-    print("To view a routine press 1.\n")
-    print("To create own workout press 2.\n")
-    print("To view saved workouts press 3.\n")
+    print("""
+===============================
+To view a routine press 1.
+
+To create own workout press 2.
+
+To view saved workouts press 3.
+
+To clear saved workouts press 4.
+================================
+    """)
     main_choice = input("Enter your choice here: ")
     validate_input(main_choice)
     if main_choice == '1':
@@ -155,8 +184,10 @@ def main():
         create_own_workout()
     elif main_choice == '3':
         view_saved_workouts()
+    elif main_choice == '4':
+        clear_saved_workouts()
     else:
-        print("Nothing here.")
+        print("Invalid entry, please enter 1, 2, 3 or 4.")
 
 
 print("""
