@@ -146,6 +146,14 @@ Bugs encountered and resolved during development:
 - Appending new saved workouts to the worksheet
     - When the user saved their newly created workout, the new row entry was inserted before the column headers. This was due to the incorrect use of the insert_rows() method, and in turn resulted in the returned workout dictionary being incoherent to end user. This was resolved by using the append_rows() method, which inserts the new data after the last row in the worksheet.
 
+- Input field not showing after create own workout saved
+    - When the user created their own workout and it was saved to the Google sheet they would get shown a menu of where to go next put no input field for their answer. The user would have to press enter to then load the input field. The issue was resolved as there was a empty parentheses on the while loop clause. Below images show the bug on the deployed project.
+
+![Image](images/screenshots/bug.png)
+![Image](images/screenshots/bug_2.png)
+
+
+
 Existing bugs:
 
 - There is the minor existing issue of the returned saved workout dictionary not being sorted in the order of the columns as presented in the worksheet. Instead, the column headers are sorted alphabetically. This is not a major issue because the returned data is not made confusing the end user and still reads well, however it is something that could be improved upon in future if necessary.
@@ -164,7 +172,7 @@ The link to an a running gym-buddy app is below.
 
 ## Used Technologies
 
-### External Libraries
+### Python Libraries
 
 #### Gspread
 
@@ -185,5 +193,18 @@ Then using the previous variable created we call the with_scopes method passing 
 Finally we need to authorize the gspread library to work in our project. To do that gspread has a method called authorize in which we have to pass the previous created variable in which we saved the scope variables.
 
 https://console.cloud.google.com
+
+#### PPrint
+
+PPrint provides a capability to “pretty-print” arbitrary Python data structures in a form which can be used as input to the interpreter. This was used when printing the data from the Google Sheet as the readability of data enhanced the user experience.
+
+https://docs.python.org/3/library/pprint.html
+
+## Content
+
+- The get_input function for input validation was taken from CodeSavant on YouTube. https://www.youtube.com/watch?v=EBP1ox3SQfA
+
+
+
 
 
