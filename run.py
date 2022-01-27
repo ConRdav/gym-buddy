@@ -173,13 +173,13 @@ def clear_saved_workouts():
     print("Are you sure you want to remove all saved workouts?\n")
     print("Enter 1 for Yes.")
     print("Enter 2 for No.")
-    clear_choice = input("Enter your choice here:\n")
-    if clear_choice == '1':
+    choice = input("Enter your choice here:\n")
+    if choice == '1':
         print("Removing saved workouts...")
         workouts.batch_clear(["2:50"])
         print("Saved workouts removed.")
         main()
-    elif clear_choice == '2':
+    elif choice == '2':
         print("Returning to main menu...")
         main()
     else:
@@ -204,17 +204,17 @@ To clear saved workouts press 4.
 To exit the Gym Buddy press 5.
 ========================================
     """)
-    while (input != 1 or 2 or 3 or 4 or 5):
-        main_choice = input("Enter your choice here:\n")
-        if main_choice == '1':
+    while input != 1 or 2 or 3 or 4 or 5:
+        choice = input("Enter your choice here:\n")
+        if choice == '1':
             get_workout_routine()
-        elif main_choice == '2':
+        elif choice == '2':
             create_own_workout()
-        elif main_choice == '3':
+        elif choice == '3':
             view_saved_workouts()
-        elif main_choice == '4':
+        elif choice == '4':
             clear_saved_workouts()
-        elif main_choice == '5':
+        elif choice == '5':
             exit_app()
         else:
             print("Invalid entry, please enter 1, 2, 3, 4 or 5.")
