@@ -121,15 +121,15 @@ Enter 3 to return to the main menu.
 Enter 4 to exit the Gym Buddy.
 ========================================
 """)
-    while input != 1 or 2 or 3 or 4:
-        create_choice = input("Enter 1, 2, 3 or 4:\n")
-        if create_choice == '1':
+    while input() != 1 or 2 or 3 or 4:
+        choice = input("Enter 1, 2, 3 or 4:\n")
+        if choice == '1':
             view_saved_workouts()
-        elif create_choice == '2':
+        elif choice == '2':
             create_own_workout()
-        elif create_choice == '3':
+        elif choice == '3':
             main()
-        elif create_choice == '4':
+        elif choice == '4':
             exit_app()
         else:
             print("Invalid entry, please enter 1, 2, 3 or 4.")
