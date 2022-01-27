@@ -28,44 +28,47 @@ The main goal for this project was to create a simple, user-friendly application
 3) View (and clear) saved workouts
     - Providing an easily-managed location and means to store personalised workout routines makes it easier for users to track their progress and plan their workout routines.
 
-These three project goals informed the user story and acceptance criteria that guided the development of the project:
+# User Stories + Acceptance Criteria
 
-A1) The user should be able to view a pre-defined workout routine based on the number of workouts they wish to complete each week.
+These three project goals informed the user story and acceptance criteria that guided the development of the project, as detailed below:
 
-A2) The user should be able to create their own workout and save this workout for future reference.
+A1) As a user, I want clear instructions on how to navigate and use the app so that it is easy to use.
 
-A3) The user should be able to both view and clear any saved workouts as they wish.
+A2) As a user, I want to be able to view a pre-defined workout routine based on the number of workouts I wish to complete each week.
 
+A3) As a user, I want to be able to create my own workout and save this workout for future reference.
+
+A4) As a user, I want to be able to both view and clear any saved workouts as I wish.
 
 ### Main Function Flow Chart
 
 ![Image](images/flowcharts/main_function_flowchart.png)
 
-The project was initiated by mapping out the main function and all supporting functions required to meet the acceptance criteria and goals of the project. These functions were separated in such a way to optimise the simplicity of the application for the user.
+The project was initiated by mapping out the main function and all supporting functions required to meet the acceptance criteria and goals of the project. These functions were separated in such a way to optimise the simplicity of the application for the user, and provide clear instructions for navigating the application, in alignment with the acceptance criteria (A1).
 
 ### View Workout Flow Chart
 
 ![Image](images/flowcharts/view_workout_flowchart.png)
 
-This flowchart shows the thought process of what needed to be achieved by the View Workout function, in alignment with the acceptance criteria (A1). The user picks either a three day, four day or five day workout routine depending on their goals and time allowances. Then the user gets to view a pre-defined workout routine based on the option they select. The user also has the option to view another routine if the one they selected didn't line up with their goals, or they can head back to the main function to continue navigating through the Workout Buddy app.
+This flowchart shows the thought process of what needed to be achieved by the View Workout function, in alignment with the acceptance criteria (A2). The user picks either a three day, four day or five day workout routine depending on their goals and time allowances. Then the user gets to view a pre-defined workout routine based on the option they select. The user also has the option to view another routine if the one they selected didn't line up with their goals, or they can head back to the main function to continue navigating through the Workout Buddy app.
 
 ### Create A Workout Flow Chart
 
 ![Image](images/flowcharts/create_workout_function.png)
 
-This flowchart shows the thought process of what needed to be achieved by the Create Workout function, in alignment with the acceptance criteria (A2). The user gets to name the workout, add four exercises, and add the sets and reps for the workout. This allows the user a degree of flexibility in personalising their workouts to meet their goals.
+This flowchart shows the thought process of what needed to be achieved by the Create Workout function, in alignment with the acceptance criteria (A3). The user gets to name the workout, add four exercises, and add the sets and reps for the workout. This allows the user a degree of flexibility in personalising their workouts to meet their goals.
 
 ### View Saved Workouts Flow Chart
 
 ![Image](images/flowcharts/view_saved_flowchart.png)
 
-This function is more simple than the previous two, so the flow chart is not as detailed. However, it allows for the specific criteria needed for the function, in alignment with the acceptance criteria (A3). This allows the user to view their previously created workouts so as to remain consistent in achieving their targets. 
+This function is more simple than the previous two, so the flow chart is not as detailed. However, it allows for the specific criteria needed for the function, in alignment with the acceptance criteria (A4). This allows the user to view their previously created workouts so as to remain consistent in achieving their targets. 
 
 ### Delete Saved Workouts Flow Chart
 
 ![Image](images/flowcharts/delete_saved_flowchart.png)
 
-This function allows the user to clear the saved workouts they have previously created, in alignment with the acceptance criteria (A3).
+This function allows the user to clear the saved workouts they have previously created, in alignment with the acceptance criteria (A4).
 
 ## Features
 
@@ -136,6 +139,8 @@ All the files pass the [PEP8](http://pep8online.com/) test successfully. As show
 
 ![Image](images/screenshots/pep8.png)
 
+Furthermore, the screenshots provided above in the features section provide evidence for User Acceptance Testing that was carried out in order to ensure that the acceptance criteria of the project were met.
+
 ## Bugs
 
 Bugs encountered and resolved during development:
@@ -147,7 +152,7 @@ Bugs encountered and resolved during development:
     - When the user saved their newly created workout, the new row entry was inserted before the column headers. This was due to the incorrect use of the insert_rows() method, and in turn resulted in the returned workout dictionary being incoherent to end user. This was resolved by using the append_rows() method, which inserts the new data after the last row in the worksheet.
 
 - Input field not showing after create own workout saved
-    - When the user created their own workout and it was saved to the Google sheet they would get shown a menu of where to go next put no input field for their answer. The user would have to press enter to then load the input field. The issue was resolved as there was a empty parentheses on the while loop clause. Below images show the bug on the deployed project.
+    - When the user created their own workout and it was saved to the Google sheet they would get shown a menu of where to go next with no input field for their answer. The user would have to press enter to then load the input field. The issue was resolved as there was a empty parentheses on the while loop clause. Below images show the bug on the deployed project. This was resolved by removing the parentheses.
 
 ![Image](images/screenshots/bug.png)
 ![Image](images/screenshots/bug_2.png)
@@ -172,13 +177,29 @@ The link to an a running gym-buddy app is below.
 
 ## Used Technologies
 
+# Languages
+    - Python (v.3.8.11)
+
+# Programmes used
+
+    - Git
+        - For maintaining version control, commiting and pushing to Github.
+    - Github
+        - For the management and storage of the code repository for this project - including files and images pushed from Gitpod.
+    - Gitpod
+        - An IDE used to develop the application.
+    - Heroku
+        - A platform used to deploy the application.
+    - Lucidchart
+        - An application used to create the flowcharts to map the project planning phase and logic flow for the code processes.
+
 ### Python Libraries
 
 #### Gspread
 
 Gspread is a Python API for Google Sheets. It allows us to read, write, update and delete data from a spreadsheet. To install it you use `pip install gspread` and then you have to open a project as a client `GSPREAD.CLIENT.open('name of the project')` and link your worksheet `worksheet('name of the worksheet')`.
 
-This app used gspread to read workouts and store workouts on the Google sheet. 
+This app used gspread to read and store workouts on the Google sheet. 
 
 The link for further reading on gspread: https://docs.gspread.org/en/v5.1.1/
 
@@ -186,11 +207,11 @@ The link for further reading on gspread: https://docs.gspread.org/en/v5.1.1/
 
 Google auth  allows us to access Google Cloud safely through a method called Credentials.
 
-We have to call a method called from_service_account_file and pass to it our credential as a parameter. We get our credentials from our Google Cloud account inside the project we are working with and save it as a enviromenment variable in our local project. Save it in a variable
+We have to call a method called 'from_service_account_file' and pass in our Credentials as a parameter. We get our Credentials from our Google Cloud account inside the project we are working with, and save it as an enviromenment variable in our local project.
 
-Then using the previous variable created we call the with_scopes method passing to it the scope that we need to authorize. Save it in a variable
+Then, using the previous variable created we call the 'with_scopes' method, passing into it the scope that we need to authorize.
 
-Finally we need to authorize the gspread library to work in our project. To do that gspread has a method called authorize in which we have to pass the previous created variable in which we saved the scope variables.
+Finally, we need to authorize the gspread library to work in our project. To do that, gspread has a method called 'authorize' in which we have to pass the previous created variable in which we saved the scope variables.
 
 https://console.cloud.google.com
 
@@ -200,10 +221,13 @@ PPrint provides a capability to “pretty-print” arbitrary Python data structu
 
 https://docs.python.org/3/library/pprint.html
 
-## Content
+## Credits
 
 - The get_input function for input validation was taken from CodeSavant on YouTube. https://www.youtube.com/watch?v=EBP1ox3SQfA
 
+- As aforementioned, there were bugs encountered during the development process of this project, which required external sources to resolve:
+    - To resolve the issue with clearing the entire workout worksheet, including the column headers, the batch_clear() method was used in place of the clear() method. The batch_clear() method was obtained from the gspread documentation, found here: https://docs.gspread.org/en/latest/user-guide.html
+    - To resolve the issue with inserting rows to the workout worksheet before the column headers, the append_rows() method was used in place of the insert_rows() method. The append_rows() method was also obtained from the gspread documentation, found here: https://docs.gspread.org/en/latest/api.html.
 
 
 
