@@ -47,12 +47,12 @@ To exit the Gym Buddy enter 3.
 ========================================
 """)
     while input != 1 or 2 or 3:
-        create_choice = input("Enter 1, 2 or 3:\n")
-        if create_choice == '1':
+        choice = input("Enter 1, 2 or 3:\n")
+        if choice == '1':
             get_workout_routine()
-        elif create_choice == '2':
+        elif choice == '2':
             main()
-        elif create_choice == '3':
+        elif choice == '3':
             exit_app()
         else:
             print("Invalid entry, please enter 1, 2 or 3.")
