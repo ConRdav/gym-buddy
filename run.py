@@ -166,18 +166,6 @@ To exit the Gym Buddy press 2.
             print("Invalid entry, please enter 1 or 2.")
 
 
-def user_choice(create_choice):
-    """
-    gives user choice feedback
-    """
-    if create_choice == '1':
-        view_saved_workouts()
-    elif create_choice == '2':
-        create_own_workout()
-    else:
-        main()
-
-
 def clear_saved_workouts():
     """
     clears all saved workouts
