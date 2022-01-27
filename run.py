@@ -157,10 +157,10 @@ To exit the Gym Buddy press 2.
 ========================================
 """)
     while input != 1 or 2:
-        create_choice = input("Enter 1 or 2:\n")
-        if create_choice == '1':
+        choice = input("Enter 1 or 2:\n")
+        if choice == '1':
             main()
-        elif create_choice == '2':
+        elif choice == '2':
             exit_app()
         else:
             print("Invalid entry, please enter 1 or 2.")
