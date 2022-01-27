@@ -130,6 +130,7 @@ All input options have validations in place so that an error message pops up if 
 
 - The ability to track workouts by entering the weights used for each exercise so that the user can tailor their routines and follow their progress.
 - The option to include an estimated one rep max for each excercise, and the automatic incrementation of the weight for the user.
+- When a user has no saved workouts Gym Buddy returns an empty array. In future, the app will print a message saying 'There are no saved workouts. Would you like to create one?'.
 
 These additional features, which could be included in future iterations, would make the app more interactive for the user and offer greater flexibility to the users in tracking their progress, in turn ensuring users continue to get value from using the app.
 
