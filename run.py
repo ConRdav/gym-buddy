@@ -2,7 +2,7 @@ from pprint import pprint
 import gspread
 from google.oauth2.service_account import Credentials
 
-
+# Global variables defined to enable project access to Google Sheets
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -14,6 +14,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('gym-buddy')
 
+# Specific worksheets defined as global variables to refine code
 three_day = SHEET.worksheet('three')
 four_day = SHEET.worksheet('four')
 five_day = SHEET.worksheet('five')
@@ -22,7 +23,8 @@ workouts = SHEET.worksheet('workouts')
 
 def get_workout_routine():
     """
-    Gets the workout routine requested by the user
+    Returns a pre-defined workout routine requested by the user,
+    based on the number of times they wish to workout per week.
     """
     print("""
 ========================================
@@ -60,7 +62,7 @@ To exit the Gym Buddy enter 3.
 
 def show_routine(routine):
     """
-    prints user requested routine
+    Prints the pre-defined workout routine based on the input of the user.
     """
     if routine == '3':
         print(f"You picked the {routine} day workout routine.\n")
@@ -78,7 +80,7 @@ def show_routine(routine):
 
 def get_input(prompt="", cast=None, condition=None, error_message=None):
     """
-    Input validation
+    Validates input and handles value error exceptions.
     """
     while True:
         try:
@@ -91,7 +93,8 @@ def get_input(prompt="", cast=None, condition=None, error_message=None):
 
 def create_own_workout():
     """
-    Allows user to create own workout
+    Allows user to create their own personalised workout
+    and save it to a worksheet for future reference.
     """
     print("Create your own workout.\n")
     new_workout = get_input(prompt="Name your workout:\n")
@@ -137,7 +140,7 @@ Enter 4 to exit the Gym Buddy.
 
 def save_workouts(data):
     """
-    updates the workouts worksheet
+    Saves the user's created workout by appending it to the workout worksheet.
     """
     print("Saving workout...\n")
     workouts.append_rows(data)
@@ -146,7 +149,7 @@ def save_workouts(data):
 
 def view_saved_workouts():
     """
-    shows all saved workouts created by user
+    Displays all saved workouts created by user for their reference.
     """
     pprint(workouts.get_all_records())
     print("""
@@ -168,7 +171,7 @@ To exit the Gym Buddy press 2.
 
 def clear_saved_workouts():
     """
-    clears all saved workouts
+    Clears all saved workouts from the worksheet.
     """
     print("Are you sure you want to remove all saved workouts?\n")
     print("Enter 1 for Yes.")
@@ -189,7 +192,7 @@ def clear_saved_workouts():
 
 def main():
     """
-    runs the app
+    Runs the app and loads the main menu for ease of navigation.
     """
     print("""
 ========================================
@@ -222,7 +225,7 @@ To exit the Gym Buddy press 5.
 
 def exit_app():
     """
-    exits the app
+    Exits the app and takes user to the welcome screen.
     """
     print("""
 ========================================
